@@ -24,7 +24,7 @@ $zipcode = $row[12];
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet"  href="mycs.css" type='text/css'>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
@@ -187,31 +187,30 @@ $zipcode = $row[12];
 
 
 
-                        <a class="read" data-toggle="modal" data-target="#myModal">Click to view map</a>
+                        <a href="#" class="read" data-toggle="modal" data-target="#myModal">Click to view map</a>
                     </form>
-                    
+
                 </div>
 
 
             </div>
-            <div class="modal" id="myModal" role="dialog">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">X</button>
-                                    <h4 class="modal-title">location</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <?php
-                                    include("usermap.php");
-                                    ?>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
-                                </div>
-                            </div>
+            <div class="modal fade" id="myModal" >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times</button>
+                            <h4 class="modal-title">Location</h4>
+                        </div>
+                        <div class="modal-body">
+                            <?php include("usermap.php"); ?>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </div>
+                </div>
+
+            </div>
 
     </body>
 </html>

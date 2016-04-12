@@ -1,7 +1,8 @@
 <?php
 include 'submit.php';
 //include 'UpdateUser.php';
-$UserQuery = "SELECT AddressLine1,AddressLine2, City FROM UserTable WHERE Id='" . $_SESSION['Id'] . "' LIMIT 1";
+
+$UserQuery = "SELECT AddressLine1,AddressLine2, City FROM UserTable WHERE Id='" . $_SESSION['id'] . "' LIMIT 1";
 $UserResult = mysqli_query($link, $UserQuery);
 $address = mysqli_fetch_array($UserResult);
 
