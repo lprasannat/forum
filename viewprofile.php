@@ -24,12 +24,9 @@ $zipcode = $row[12];
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+       <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet"  href="mycs.css" type='text/css'>
-        <!--<script type="text/javascript" src="js/jquery.js"></script>-->
+        <script type="text/javascript" src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
 
@@ -67,145 +64,154 @@ $zipcode = $row[12];
             </div>
             <div class="container contentcontainer">
                 <img alt="full screen background image" src="image2.jpg" id="full-screen-background-image"  class="img-responsive"/>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3" id="toprow">
-                        <!-- <h1 class="margintop">SIGN UP</h1>
-                         <!--<p class="lead"> Your secret Diary</p>-->
-                         <!--<p>some more information about the app.You can go into alittle more details if you want to.</p>-->
 
-                        <p class="bold margintop"></p>
-                        <form class="margintop" method="post">
+                <div class="col-md-6 col-md-offset-3" id="toprow">
+                    <!-- <h1 class="margintop">SIGN UP</h1>
+                     <!--<p class="lead"> Your secret Diary</p>-->
+                     <!--<p>some more information about the app.You can go into alittle more details if you want to.</p>-->
 
-                            <div class="row">
-                                <div class="col-md-6 col-offset-3">
+                    <p class="bold margintop"></p>
+                    <form class="margintop" method="post">
 
-                                    <div class="form-group">
-                                        <label>First Name:</label>
-                                        <input type="text" class="form-control" value="<?php echo $firstName; ?>" disabled>
+                        <div class="row">
+                            <div class="col-md-6 col-offset-3">
 
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-offset-3">
-                                    <div class="form-group">
+                                <div class="form-group">
+                                    <label>First Name:</label>
+                                    <input type="text" class="form-control" value="<?php echo $firstName; ?>" disabled>
 
-                                        <label for="LastNamesignup">LastName</label><br>
-                                        <input type="text" name="LastNamesignup" value="<?php echo $lastName; ?>" disabled oninvalid="validateLastName(this);"  oninput="validateLastName(this);"  required="required"  placeholder="enter ur  name"  class='form-control'>
-                                        <span id="lastspan"></span>
-
-                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 col-offset-3">
+                            <div class="col-md-6 col-offset-3">
+                                <div class="form-group">
 
-                                    <div class="form-group">
+                                    <label for="LastNamesignup">LastName</label><br>
+                                    <input type="text" name="LastNamesignup" value="<?php echo $lastName; ?>" disabled oninvalid="validateLastName(this);"  oninput="validateLastName(this);"  required="required"  placeholder="enter ur  name"  class='form-control'>
+                                    <span id="lastspan"></span>
 
-                                        <label for="emailsignup">EmailAddress</label><br>
-                                        <input type="email" name="emailsignup" value="<?php echo $emailAddress; ?>" disabled oninvalid="validateEmail(this);"  oninput="validateEmail(this);" required="required" placeholder="enter ur email"  class='form-control'>
-                                        <span id="emailspan"></span>
-
-                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group col-offset-3">
-
-                                        <label for="MobileNumber">Mobile Number</label><br>
-                                        <input type="text" name="MobileNumber" value="<?php echo $mobileNumber; ?>" disabled placeholder="enter ur mobilenumber"  class='form-control'>
-                                        <span id="mobilespan"></span>
-
-                                    </div>
-                                </div>
-
-
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 col-offset-3">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-offset-3">
 
-                                    <div class="form-group">
+                                <div class="form-group">
 
-                                        <label for="AddressLine1">Address Line1</label><br>
-                                        <input type="text" name="AddressLine1"  value="<?php echo $addressLineOne; ?>" disabled  class='form-control'>
-                                        <span id="emailspan"></span>
+                                    <label for="emailsignup">EmailAddress</label><br>
+                                    <input type="email" name="emailsignup" value="<?php echo $emailAddress; ?>" disabled oninvalid="validateEmail(this);"  oninput="validateEmail(this);" required="required" placeholder="enter ur email"  class='form-control'>
+                                    <span id="emailspan"></span>
 
-                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group col-offset-3">
-
-                                        <label for="AddressLine2">Address Line2</label><br>
-                                        <input type="text" name="AddressLine2" value="<?php echo $addressLineTwo; ?>" disabled  class='form-control'>
-                                        <span id="mobilespan"></span>
-
-                                    </div>
-                                </div>
-
-
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 col-offset-3">
+                            <div class="col-md-6">
+                                <div class="form-group col-offset-3">
 
-                                    <div class="form-group">
+                                    <label for="MobileNumber">Mobile Number</label><br>
+                                    <input type="text" name="MobileNumber" value="<?php echo $mobileNumber; ?>" disabled placeholder="enter ur mobilenumber"  class='form-control'>
+                                    <span id="mobilespan"></span>
 
-                                        <label for="City">City</label><br>
-                                        <input type="text" name="City" value="<?php echo $city; ?>" disabled class='form-control'>
-                                        <span id="emailspan"></span>
-
-                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group col-offset-3">
-
-                                        <label for="State">State</label><br>
-                                        <input type="text" name="State" value="<?php echo $state; ?>" disabled  class='form-control'>
-                                        <span id="mobilespan"></span>
-
-                                    </div>
-                                </div>
-
-
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 col-offset-3">
 
-                                    <div class="form-group">
 
-                                        <label for="Country">Country</label><br>
-                                        <input type="text" name="Country"  value="<?php echo $country; ?>" disabled  class='form-control'>
-                                        <span id="emailspan"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-offset-3">
 
-                                    </div>
+                                <div class="form-group">
+
+                                    <label for="AddressLine1">Address Line1</label><br>
+                                    <input type="text" name="AddressLine1"  value="<?php echo $addressLineOne; ?>" disabled  class='form-control'>
+                                    <span id="emailspan"></span>
+
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group col-offset-3">
-
-                                        <label for="ZipCode">ZipCode</label><br>
-                                        <input type="text" name="ZipCode" value="<?php echo $zipcode; ?>" disabled  class='form-control'>
-                                        <span id="mobilespan"></span>
-
-                                    </div>
-                                </div>
-
-
                             </div>
-                           
-                            <a href="Map.php">Click me to view address</a>
+                            <div class="col-md-6">
+                                <div class="form-group col-offset-3">
+
+                                    <label for="AddressLine2">Address Line2</label><br>
+                                    <input type="text" name="AddressLine2" value="<?php echo $addressLineTwo; ?>" disabled  class='form-control'>
+                                    <span id="mobilespan"></span>
+
+                                </div>
+                            </div>
 
 
-                            <input type="submit"  value="submit" class="btn btn-success btn-lg margintop" name='submit'>
-                        </form>
-                        <div class="col-md-8 top col-md-offset-1">
-                            <?php
-                            if (isset($error)) {
-                                echo "<div class='alert alert-danger'>" . $error . "</div>";
-                            }
-                            ?>
-                            <?php
-                            if (isset($message)) {
-                                echo "<div class='alert alert-success'>" . $message . "</div>";
-                            }
-                            ?>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-offset-3">
+
+                                <div class="form-group">
+
+                                    <label for="City">City</label><br>
+                                    <input type="text" name="City" value="<?php echo $city; ?>" disabled class='form-control'>
+                                    <span id="emailspan"></span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group col-offset-3">
+
+                                    <label for="State">State</label><br>
+                                    <input type="text" name="State" value="<?php echo $state; ?>" disabled  class='form-control'>
+                                    <span id="mobilespan"></span>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-offset-3">
+
+                                <div class="form-group">
+
+                                    <label for="Country">Country</label><br>
+                                    <input type="text" name="Country"  value="<?php echo $country; ?>" disabled  class='form-control'>
+                                    <span id="emailspan"></span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group col-offset-3">
+
+                                    <label for="ZipCode">ZipCode</label><br>
+                                    <input type="text" name="ZipCode" value="<?php echo $zipcode; ?>" disabled  class='form-control'>
+                                    <span id="mobilespan"></span>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <a class="read" data-toggle="modal" data-target="#myModal">Click to view map</a>
+                    </form>
+                    
+                </div>
+
+
+            </div>
+            <div class="modal" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">X</button>
+                                    <h4 class="modal-title">location</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <?php
+                                    include("usermap.php");
+                                    ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-            </div>
+    </body>
+</html>

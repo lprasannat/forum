@@ -138,8 +138,8 @@
                    
                     <input type="button" class="btn btn-success" id="Edit" value="Edit"/>
                      <input type="button" class="btn btn-success" id="Delete" value="Delete"/>
-                    <a href="map.php?Id=<?php echo $id?>">Click here To View Location</a>
-                    <a href="map.php?Id=<?php echo $id?>"   class="read" data-toggle="modal" data-target="#myModal" >Click Here to view location</a>
+                    <a href="maps.php?Id=<?php echo $id?>">Click here To View Location</a>
+                    <a href="#" class="read" data-toggle="modal" data-target="#myModal" >Click Here to view location</a>
 
                 </form> 
                
@@ -147,28 +147,23 @@
 
         </div>
 
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-
-               
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">X</button>
-                        <h4 class="modal-title">Location</h4>
-                    </div>
-                    <div class="modal-body">
-                        <?php
-                        include ('map.php');
-                        ?>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">X</button>
+                <h4 class="modal-title">Location</h4>
+            </div>
+            <div class="modal-body">
+                <?php include("maps.php");?>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
+    </div>
+    
+</div>
 
     
 
