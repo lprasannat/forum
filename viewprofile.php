@@ -32,8 +32,7 @@ $zipcode = $row[12];
 
     </head>
     <body data-spy="scroll" data-target=".navbar-collapse">
-
-
+        
         <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -50,10 +49,10 @@ $zipcode = $row[12];
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="#"></a></li>
-                            <li><a href="myprofile.php">My Profile</a></li>
-                            <li  class="active"><a href="">View Profile</a></li>
-                            <li><a href="changepassword.php">Change Password</a></li>
-                            <li><a href="index.php?logout=1">Log Out</a></li>
+                            <li><a href="myprofile.php"><i class="glyphicon  glyphicon-user" style="color:green"></i>My Profile</a></li>
+                            <li  class="active"><a href=""><i class="glyphicon  glyphicon-eye-open" style="color:green"></i>View Profile</a></li>
+                            <li><a href="changepassword.php"><i class="glyphicon  glyphicon-pencil" style="color:green"></i>Change Password</a></li>
+                            <li><a href="index.php?logout=1"><i class="glyphicon  glyphicon-off" style="color:green"></i>Log Out</a></li>
 
                         </ul>
                         <div class=" navbar-header pull-right"><h4><a href=""><?php echo $firstName; ?></a></h4>

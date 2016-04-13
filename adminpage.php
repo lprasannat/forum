@@ -1,6 +1,6 @@
 <?php
 include 'submit.php';
-//include 'AdminSql.php';
+
 $sql = "SELECT Id,FirstName,LastName,EmailId,MobileNumber,AddressLine1 FROM UserTable";
 $result = mysqli_query($link, $sql);
 
@@ -60,17 +60,15 @@ $Row = mysqli_fetch_all($result);
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav ">
-                        <li class="active"><a href="">User Table</a></li>
-                        <li class=""><a href="createuser.php">Create User</a></li>
+                        <li class="active"><a href=""><i class="glyphicon  glyphicon-table"></i>User Table</span></a></li>
+                        <li class=""><a href="createuser.php"><i class="glyphicon  glyphicon-user" style="color:green"></i>Create User</a></li>
 
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                        <li><a href="index.php?logout=1">Log Out</a></li>
+                        <li><a href="index.php?logout=1"><i class="glyphicon  glyphicon-off" style="color:green"></i>Log Out</a></li>
 
                     </ul>
-                    <?php
-                    echo $AdminName;
-                    ?>
+                    
                 </div>
                 <div class="container">
 

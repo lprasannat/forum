@@ -20,7 +20,7 @@ if($oldpassword==$row[0]){
     }
 }
  else {
-     $error="Invalid password Please check and re-enter";
+     $error="Invalid password Please check password and re-enter";
 }
 }
 }

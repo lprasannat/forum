@@ -1,3 +1,12 @@
+<?php
+include ('connection.php');
+
+session_start();
+$id = $_SESSION["id"];
+$queryUserLogIn = "select AdminName from AdminTable where Id='$id'";
+$resultUserLogIn = mysqli_query($link, $queryUserLogIn);
+$row = mysqli_fetch_row($resultUserLogIn);
+?>
 <!DOCTYPE html>
 
 <html>
@@ -20,9 +29,10 @@
             <div class="container">
                 <div class="navbar-header pull-left">
                     <a class="navbar-brand" href="#">FORUM MANAGEMENT</a>
-
-
                 </div>
+                <div class=" navbar-header pull-right"><h4><a href=""><?php echo $row[0]; ?></a></h4>
+
+                    </div>
 
             </div>
         </div>
@@ -30,7 +40,7 @@
             <img alt="full screen background image" src="image2.jpg" id="full-screen-background-image"  class="img-responsive"/>
             <div class="row">
                 <div class="col-md-6 col-md-offset-3" id="toprow">
-                    <strong><center><p class="forgot">YOU HAVE SUCCESSFULLY LOGGED IN</p></center></strong>
+                    <strong><center><p class="forgot">YOU HAVE SUCCESSFULLY LOGGED IN<?php echo $row[0]; ?></p></center></strong>
                     <a href="adminpage.php"><p class="forgot">DashBoard</p></a>
                 </div>
             </div>

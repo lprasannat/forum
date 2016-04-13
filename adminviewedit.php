@@ -71,7 +71,7 @@
                         <div class="sign">
                             
                             <?php
-                            echo $AdminName;
+                             echo "lakshmi";
                             ?>
                         </div>
                     </div>
