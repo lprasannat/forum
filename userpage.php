@@ -14,9 +14,15 @@
         <script type="text/javascript" src="clientvalidation.js"></script>
         <?php
         include("submit.php");
-        
+        session_start();
+        $id = $_SESSION['id'];
+        if ($id) {
+            
+        } else {
+            header("Location:index.php");
+        }
         ?>
-        
+
     </head>
     <body data-spy="scroll" data-target=".navbar-collapse">
         <div class="navbar navbar-default navbar-fixed-top">
@@ -36,7 +42,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="#"></a></li>
                             <li class="active"><a href="">My Profile</a></li>
-                             <li><a href="">View Profile</a></li>
+                            <li><a href="">View Profile</a></li>
                             <li><a href="changepassword.php">Change Password</a></li>
                             <li><a href="index.php?logout=1">Log Out</a></li>
 

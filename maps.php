@@ -62,7 +62,7 @@ echo $Variable;
                         map.setCenter(marker.getPosition());
                     });
                      
-                $("#myModal").on("shown.bs.modal", function () {
+                $("#ModalId").on("shown.bs.modal", function () {
                     google.maps.event.trigger(googleMap, "resize");
                     return map.setCenter(myCenter);
                 });

@@ -65,45 +65,45 @@ if (isset($_POST["signup"])) {
 if ($_POST["signup"] == "SignUp") {
 
 if (!$_POST['emailsignup'])
-$error.="please enter the email id <br/>";
+$Error.="please enter the email id <br/>";
 else if (!(filter_var($_POST['emailsignup'], FILTER_VALIDATE_EMAIL)))
-$error.="please enter valid email id <br/>";
+$Error.="please enter valid email id <br/>";
 
 
 if (!$_POST['passwordsignup'])
-$error.="please enter the password <br/>";
+$Error.="please enter the password <br/>";
 else {
 
 
 if (strlen($_POST['passwordsignup']) < 8)
-$error.="the length of pssword must be atleast 8 characters<br/>";
+$Error.="the length of pssword must be atleast 8 characters<br/>";
 if (!preg_match('`[A-Z]`', $_POST['passwordsignup']))
-$error.="password should contain atleast one Captial Letter <br/>";
+$Error.="password should contain atleast one Captial Letter <br/>";
 }if (!$_POST['ConfirmPassword'])
-$error.="please enter the confirm password <br/>";
+$Error.="please enter the confirm password <br/>";
 
 
 else {
 if (($_POST['passwordsignup']) != $_POST['ConfirmPassword']) {
-$error.="please enter correct password<br>";
+$Error.="please enter correct password<br>";
 }
 if (!preg_match('`[A-Z]`', $_POST['ConfirmPassword']))
-$error.="password should contain atleast one Captial Letter <br/>";
+$Error.="password should contain atleast one Captial Letter <br/>";
 }
 if (!$_POST['MobileNumber'])
-$error.="please enter mobilenumber <br/>";
+$Error.="please enter mobilenumber <br/>";
 
 else {
 if (strlen($_POST['MobileNumber']) != 10) {
 
-$error.="please enter a valid mobile number<br/>";
+$Error.="please enter a valid mobile number<br/>";
 }
 if (!is_numeric($_POST['MobileNumber'])) {
-$error.="please enter only numbers";
+$Error.="please enter only numbers";
 }
 }
-if ($error)
-$error .= "there were errors in your signup details<br/>" . $error;
+if ($Error)
+$Error .= "there were errors in your signup details<br/>" . $Error;
 else {
     //$firstName=$_POST['FirstName'];
 $emailsignup = $_POST["emailsignup"];
@@ -118,13 +118,13 @@ $queryselect = "select * from UserTable where EmailId='$emailsignup' and Passwor
 $resultselect = mysqli_query($link, $queryselect);
 $values = mysqli_num_rows($resultselect);
 if ($values) {
-$error .= "email already registered";
+$Error .= "email already registered";
 } else {
 $query1 = "insert into UserTable(FirstName,LastName,EmailId,Password,ConfirmPassword,MobileNumber) values ('$FirstName','$LastName','$emailsignup','$passwordsignup','$ConfirmPassword','$MobileNumber')";
 $resultsignup = mysqli_query($link, $query1);
 
 mysqli_query($link, $query1);
-$message="you were successfully signed!";
+$Message="you were successfully signed!";
 //$_SESSION['id'] = mysqli_insert_id($link);
 // print_r($_SESSION);
 //header("Location:mainpage.php");

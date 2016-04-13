@@ -1,35 +1,35 @@
 <?php
 session_start();
-$id=$_SESSION["id"];
-$query="select * from UserTable where Id='$id'";
-$result=mysqli_query($link, $query);
-$row=mysqli_fetch_row($result);
-$firstName=$row[1];
-$lastName=$row[2];
-$emailAddress=$row[3];
-$mobileNumber=$row[6];
-$addressLineOne=$row[7];
-$addressLineTwo=$row[8];
-$city=$row[9];
-$state=$row[10];
-$country=$row[11];
-$zipcode=$row[12];
+$Id=$_SESSION["id"];
+$Query="select * from UserTable where Id='$Id'";
+$Result=mysqli_query($link, $Query);
+$Row=mysqli_fetch_row($Result);
+$FirstName=$Row[1];
+$LastName=$Row[2];
+$EmailAddress=$Row[3];
+$MobileNumber=$Row[6];
+$AddressLineOne=$Row[7];
+$AddressLineTwo=$Row[8];
+$City=$Row[9];
+$State=$Row[10];
+$Country=$Row[11];
+$ZipCode=$Row[12];
 if(isset($_POST["submit"])){
     if($_POST["submit"]=="SUBMIT"){
-    $editAddressOne=$_POST["AddressLine1"];
-    $editAddressTwo=$_POST["AddressLine2"];
-    $editCity=$_POST["City"];
-    $editState=$_POST["State"];
-    $editCountry=$_POST["Country"];
-    $editZipCode=$_POST["ZipCode"];
-    $queryedit="update UserTable set AddressLine1='$editAddressOne', AddressLine2='$editAddressTwo', City='$editCity', State='$editState', Country='$editCountry', ZipCode='$editZipCode' where Id='$id'";
-    $editResult=mysqli_query($link, $queryedit);
-    if($editResult){
+    $EditAddressOne=$_POST["AddressLine1"];
+    $EditAddressTwo=$_POST["AddressLine2"];
+    $EditCity=$_POST["City"];
+    $EditState=$_POST["State"];
+    $EditCountry=$_POST["Country"];
+    $EditZipCode=$_POST["ZipCode"];
+    $QueryEdit="update UserTable set AddressLine1='$EditAddressOne', AddressLine2='$EditAddressTwo', City='$EditCity', State='$EditState', Country='$EditCountry', ZipCode='$EditZipCode' where Id='$Id'";
+    $EditResult=mysqli_query($link, $QueryEdit);
+    if($EditResult){
         
-        $message="Successfully Updated the Profile";
+        $Message="Successfully Updated the Profile";
     }
     else{
-        $error="Profile could not be Updated Please try again";
+        $Error="Profile could not be Updated Please try again";
     }
 }}
 ?>

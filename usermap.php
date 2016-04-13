@@ -1,19 +1,14 @@
 <?php
 include 'submit.php';
-//include 'UpdateUser.php';
-
 $UserQuery = "SELECT AddressLine1,AddressLine2, City FROM UserTable WHERE Id='" . $_SESSION['id'] . "' LIMIT 1";
 $UserResult = mysqli_query($link, $UserQuery);
 $address = mysqli_fetch_array($UserResult);
-
-
 $Variable = $address['1'] . " " . $address['2'];
 echo $Variable;
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
         <script
@@ -62,7 +57,7 @@ echo $Variable;
                         map.setCenter(marker.getPosition());
                     });
                      
-                $("#myModal").on("shown.bs.modal", function () {
+                $("#ModalId").on("shown.bs.modal", function () {
                     google.maps.event.trigger(googleMap, "resize");
                     return map.setCenter(myCenter);
                 });

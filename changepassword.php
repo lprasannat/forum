@@ -1,7 +1,13 @@
-
-<?php include ('passwordchange.php'); ?>
+<?php
+include ('passwordchange.php');
+session_start();
+$Id = $_SESSION['id'];
+if ($Id) {    
+} else {
+    header("Location:index.php");
+}
+?>
 <!DOCTYPE html>
-
 <html>
     <head>
         <title>TODO supply a title</title>
@@ -15,7 +21,6 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="changepasswordvalidation.js"></script>
-
     </head>
     <body data-spy="scroll" data-target=".navbar-collapse">
         <img alt="full screen background image" src="image2.jpg" id="full-screen-background-image"  class="img-responsive"/>
@@ -29,21 +34,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
                 </div>
                 <div class="collapse navbar-collapse">
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                       
                             <li><a href="myprofile.php"><i class="glyphicon  glyphicon-user" style="color:green"></i>My Profile</a></li>
                             <li><a href="viewprofile.php"><i class="glyphicon  glyphicon-eye-open" style="color:green"></i>View Profile</a></li>
                             <li class="active"><a href=""><i class="glyphicon  glyphicon-pencil" style="color:green"></i>Change Password</a></li>
                             <li><a href="index.php?logout=1"><i class="glyphicon  glyphicon-off" style="color:green"></i>Log Out</a></li>
-
                         </ul>
-
-                        <form method="post"></form>
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -51,30 +51,24 @@
             <form method="post">
                 <div class='row'>
                     <p id='toprow'><label>change Password</label></p><br>
-                  
-                        <label>Old Password</label> <input type="password" name="OldPassword"  oninvalid="validatePassword(this);"  oninput="validatePassword(this);"  required="required"  placeholder="enter ur password"  class='form-control'>
-                        <?php if (isset($error)) {
-                            echo "<div class='alert alert-danger'>" . $error . "</div>";
-                        } ?>
-
-                        <label>New Password</label> <input type="password" name="NewPassword"  id="newPassword" oninvalid="validatePassword(this);"  oninput="validatePassword(this);"  required="required"  placeholder="enter ur new password"  class='form-control'>
-                 
+                    <label>Old Password</label> <input type="password" name="OldPassword"  oninvalid="validatePassword(this);"  oninput="validatePassword(this);"  required="required"  placeholder="enter ur password"  class='form-control'>
+                    <?php
+                    if (isset($Error)) {
+                        echo "<div class='alert alert-danger'>" . $Error . "</div>";
+                    }
+                    ?>
+                    <label>New Password</label> <input type="password" name="NewPassword"  id="newPassword" oninvalid="validatePassword(this);"  oninput="validatePassword(this);"  required="required"  placeholder="enter ur new password"  class='form-control'>
                     <label>Confirm New Password</label><input type="password" name="ConfirmNewPassword"  oninvalid="validatePassword(this);"  oninput="validatePassword(this);"  required="required"  placeholder="enter ur  confirm password"  id="confirmPassword" class='form-control'>
                     <input type="submit"  value="Submit" class="btn btn-success btn-lg margintop" name='submit'>
                 </div>
         </div>
     </form>
     <div class="col-md-8 col-md-offset-2"><?php
-        if (isset($message)) {
-            echo "<div class='alert alert-success'>" . $message . "</div>";
-        }
-        ?></div>
-</div>
-</div>
-
-
-
+                    if (isset($Message)) {
+                        echo "<div class='alert alert-success'>" . $Message . "</div>";
+                    }
+                    ?>
+    </div>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
 </body>
 </html>

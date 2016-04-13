@@ -1,5 +1,12 @@
 <?php
 include ('passwordforgot.php');
+session_start();
+$id = $_SESSION['id'];
+if ($id) {
+    
+} else {
+    header("Location:index.php");
+}
 ?>
 <html>
     <head>
